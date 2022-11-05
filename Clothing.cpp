@@ -51,6 +51,17 @@ void ClassicPant::printClothing()
 
 Client::Client() : pClothing(nullptr){}
 
+
+void Client::printClothing()
+{
+    pClothing->printClothing();
+}
+
+Client::~Client()
+{
+    delete pClothing;
+}
+
 void Client::getClothing(int i)
 {
     switch (i)
@@ -95,14 +106,4 @@ void Client::getClothing(int i)
     default:
         break;
     }
-}
-
-void Client::printClothing()
-{
-    pClothing->printClothing();
-}
-
-Client::~Client()
-{
-    delete pClothing;
 }
