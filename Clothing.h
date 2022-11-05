@@ -2,6 +2,8 @@
 
 class Clothing
 {
+private:
+//some atributions
 public:
     virtual void printClothing() = 0;
 };
