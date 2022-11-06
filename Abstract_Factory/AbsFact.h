@@ -1,13 +1,14 @@
 #pragma once
 
 
+
 //abstract products
 class Shirt
 {
 private:
 //some attribution
 public:
-    void printShirt();
+    virtual void print();
 };
 
 class TShirt
@@ -15,7 +16,7 @@ class TShirt
 private:
 //some attribution
 public:
-    void printTShirt();
+    virtual void print();
 };
 
 class Pants
@@ -23,62 +24,62 @@ class Pants
 private:
 //some attribution
 public:
-    void printPants();
+    virtual void print();
 };
 
 //concrete products
 class StreetwearShirt : public Shirt
 {
 public:
-    void printClothing();
+    void print();
 };
 
 class BusinessShirt : public Shirt
 {
 public:
-    void printClothing();
+    void print();
 };
 
 class ClassicShirt : public Shirt
 {
 public:
-    void printClothing();
+    void print();
 };
 
 class StreetwearTShirt : public TShirt
 {
 public:
-    void printClothing();
+    void print();
 };
 
 class BusinessTShirt : public TShirt
 {
 public:
-    void printClothing();
+    void print();
 };
 
 class ClassicTShirt : public TShirt
 {
 public:
-    void printClothing();
+    void print();
 };
 
 class StreetwearPants : public Pants
 {
 public:
-    void printClothing();
+    void print();
 };
 
 class BusinessPants : public Pants
 {
 public:
-    void printClothing();
+    void print();
 };
 
 class ClassicPants : public Pants
 {
 public:
-    void printClothing();
+    void print();
 };
 
 //abstract factory
@@ -88,6 +89,7 @@ public:
     virtual Shirt* getShirt();
     virtual TShirt* getTShirt();
     virtual Pants* getPants();
+
 };
 
 //concrete factories
@@ -116,4 +118,16 @@ public:
 };
 
 //Client
-class Client;
+class Client
+{
+private:
+    Shirt* pShirt;
+    TShirt* pTShirt;
+    Pants* pPants;
+public:
+    Client();
+    ~Client();
+
+    void getClothing();
+    void display();
+};
