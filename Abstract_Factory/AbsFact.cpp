@@ -81,3 +81,35 @@ Pants* ClassicFactory::getPants()
 {
     return new ClassicPants;
 }
+
+Client::Client() : pShirt(nullptr), pTShirt(nullptr), pPants(nullptr){}
+Client::~Client()
+{
+    delete pShirt, pTShirt, pPants;
+}
+
+void Client::getClothing(ClothingShop* shop, clth type)
+{
+    switch (type)
+    {
+    case SH:
+        pShirt = shop->getShirt();
+        break;
+    case TS:
+        pTShirt = shop->getTShirt();
+        break;
+    case PN:
+        pPants = shop->getPants();
+        break;    
+    default:
+        //some error messages
+        break;
+    }
+}
+
+void Client::display()
+{
+    pShirt->print();
+    pTShirt->print();
+    pPants->print();
+}
