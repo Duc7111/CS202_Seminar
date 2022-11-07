@@ -1,6 +1,6 @@
 #pragma once
 
-enum clth{SH, TS, PN};
+enum clth{SH, TS, PN}; // SHirt, T-Shirt and PaNts 
 
 //abstract products
 class Shirt
