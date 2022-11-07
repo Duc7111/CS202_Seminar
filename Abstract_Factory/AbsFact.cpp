@@ -8,35 +8,35 @@ void StreetwearShirt::print()
 {
     cout << "Streetwear shirt" << endl;
 }
-void StreetwearTShirt::print()
-{
-    cout << "Streetwear T-shirt" << endl;
-}
-void StreetwearPants::print()
-{
-    cout << "Streetwear pants" << endl;
-}
-
 void BusinessShirt::print()
 {
     cout << "Business shirt" << endl;
+}
+void ClassicShirt::print()
+{
+    cout << "Classic shirt" << endl;
+}
+
+void StreetwearTShirt::print()
+{
+    cout << "Streetwear T-shirt" << endl;
 }
 void BusinessTShirt::print()
 {
     cout << "Business T-shirt" << endl;
 }
-void BusinessPants::print()
-{
-    cout << "Business pants" << endl;
-}
-
-void ClassicShirt::print()
-{
-    cout << "Classic shirt" << endl;
-}
 void ClassicTShirt::print()
 {
     cout << "Classic T-shirt" << endl;
+}
+
+void StreetwearPants::print()
+{
+    cout << "Streetwear pants" << endl;
+}
+void BusinessPants::print()
+{
+    cout << "Business pants" << endl;
 }
 void ClassicPants::print()
 {
